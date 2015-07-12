@@ -25,6 +25,20 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://stratus.soundcloud.com/stratus.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.stratus({
+                    auto_play: true,
+                    color: "8B9DC3",
+                    theme: "https://stratus.soundcloud.com/themes/dark.css",
+                    links: "https://soundcloud.com/blakeandkurt/sets/showcase"
+                });
+            });
+        </script>
+
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -43,9 +57,6 @@
                             <div id="media">
                                 <div id="youtube">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/WN-dzrsuY74" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                                <div id="soundcloud">
-                                    <iframe width="560" height="400" scrolling="no" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/122302497&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=true&amp;visual=true"></iframe>
                                 </div>
                             </div>
                             <div id="links">
