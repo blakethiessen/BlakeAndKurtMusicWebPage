@@ -64,7 +64,7 @@ video {
     width: 64px;
     height: 64px;
     display: inline-block;
-    margin: 0 5px;
+    margin: 1px 6px;
 
     filter:         grayscale(50%);
     -webkit-filter: grayscale(50%);
@@ -92,13 +92,18 @@ video {
 /* Custom CSS */
 
 * {
-    font-family: 'FallingSky';
-    color: white;
+    color: #EAEAEA;
+    font-family: London;
 }
 
 @font-face {
-    font-family: 'FallingSky';
-    src: url('../fonts/FallingSkyBlk.otf');
+    font-family: 'London';
+    src: url('../fonts/LondonBetween.ttf');
+}
+
+@font-face {
+    font-family: 'Ostrich';
+    src: url('../fonts/OstrichSans-Heavy.otf');
 }
 
 #email {
@@ -109,11 +114,8 @@ video {
     color: #ff2a00;
 }
 
-#title {
-    margin-bottom: 2%;
-}
-
 #title > * {
+    font-family: 'Ostrich';
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -157,15 +159,23 @@ video {
     background-color: hsla(0, 0%, 33%, 0.2);
 }
 
-#about > p {
-    width: 90%;
-    margin: 10px auto;
+#about > div {
+    width: 80%;
+    margin: 15px auto;
+    padding: 1px 20px;
+    background-color: rgba(115, 106, 74, .3);
+
+    border-radius: 30px;
+}
+
+#about > div > p {
     text-align: center;
+    /*font-family: sans-serif;*/
 }
 
 #title > h1 {
-    font-size: 7.4vmax;
-    line-height: 1em;
+    font-size: 100px;
+    line-height: .7em;
 }
 
 #title > h2 {
@@ -178,25 +188,13 @@ video {
 }
 
 
-@media screen and (min-aspect-ratio: 23/20) {
+@media screen and (min-aspect-ratio: 6/5) {
     #leftcolumn {
         width: 94%;
     }
 
     #news {
-        width: 100%;
-    }
-
-    #title > h1 {
-        font-size: 7vmax;
-    }
-
-    #title > h2 {
-        font-size: 1.5vmax;
-    }
-
-    #links > * {
-        font-size: 1.3vmax;
+        width: 60%;
     }
 
     #lcc3 {
@@ -204,112 +202,6 @@ video {
     }
 }
 
-@media screen and (min-aspect-ratio: 55/40) {
-    #leftcolumn {
-        width: 82%;
-    }
-
-    #title > h1 {
-        font-size: 6vmax;
-    }
-
-    #title > h2 {
-        font-size: 1.4vmax;
-    }
-
-    #links > * {
-        font-size: 1.1vmax;
-    }
-}
-
-@media screen and (min-aspect-ratio: 16/10) {
-    #leftcolumn {
-        width: 86%;
-    }
-    #news {
-        width: 88%;
-    }
-
-    #title > h1 {
-        font-size: 5.5vmax;
-    }
-
-    #title > h2 {
-        font-size: 1.2vmax;
-    }
-
-    #links > * {
-        font-size: 1vmax;
-    }
-}
-
-@media screen and (min-aspect-ratio: 149/88) {
-    #leftcolumn {
-        /*width: 86%;*/
-    }
-    #news {
-        width: 76%;
-    }
-
-    #title > h1 {
-        font-size: 5.2vmax;
-    }
-
-    #title > h2 {
-        font-size: 1.1vmax;
-    }
-
-    #links > * {
-        font-size: .9vmax;
-    }
-}
-
-@media screen and (min-aspect-ratio: 170/88) {
-    #leftcolumn {
-        width: 80%;
-    }
-    #news {
-        width: 68%;
-    }
-
-    #title > h1 {
-        font-size: 5vmax;
-    }
-
-    #title > h2 {
-        font-size: 1vmax;
-    }
-
-    #links > * {
-        font-size: .8vmax;
-    }
-}
-
-@media screen and (min-aspect-ratio: 9/4) { /* 2.25/1 */
-    #leftcolumn {
-        width: 90%;
-    }
-    #news {
-        width: 55%;
-    }
-}
-
-@media screen and (min-aspect-ratio: 12/5) { /* 2.4/1 */
-    #news {
-        width: 52%;
-    }
-    #title > h1 {
-        font-size: 4vmax;
-    }
-
-    #title > h2 {
-        font-size: .85vmax;
-    }
-
-    #links > * {
-        font-size: .7vmax;
-    }
-}
 
 /* ==========================================================================
    Browser Upgrade Prompt
