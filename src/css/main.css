@@ -4,10 +4,10 @@ html, body {
     overflow: hidden;
 }
 
-@media (min-width: 1px) { #wrapper { background-image: url('../img/bg768.jpg'); } }
-@media (min-width: 1366px) { #wrapper { background-image: url('../img/bg1080.jpg'); } }
-@media (min-width: 1921px) { #wrapper { background-image: url('../img/bg1440.jpg'); } }
-@media (min-width: 2561px) { #wrapper { background-image: url('../img/bg2916.jpg'); } }
+@media (min-width: 1px) { #wrapper { background-image: url('../img/backgrounds/bg768.jpg'); } }
+@media (min-width: 1366px) { #wrapper { background-image: url('../img/backgrounds/bg1080.jpg'); } }
+@media (min-width: 1921px) { #wrapper { background-image: url('../img/backgrounds/bg1440.jpg'); } }
+@media (min-width: 2561px) { #wrapper { background-image: url('../img/backgrounds/bg2916.jpg'); } }
 
 #wrapper {
     min-height: 100%;
@@ -52,6 +52,44 @@ svg,
 video {
     vertical-align: middle;
 }
+
+/* Icons */
+
+#links {
+    text-align: center;
+}
+
+#links > a {
+    background-image: url('../img/sm_icons/sm_icons-desktop.png');
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+
+    filter:         grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    -moz-filter:    grayscale(50%);
+    -ms-filter:     grayscale(50%);
+    -o-filter:      grayscale(50%);
+}
+
+#links > a:hover {
+    filter:         none;
+    -webkit-filter: none;
+    -moz-filter:    none;
+    -ms-filter:     none;
+    -o-filter:      none;
+}
+
+.icon-youtube {
+    background-position-x: -64px;
+}
+
+.icon-soundcloud {
+    background-position-x: -128px;
+}
+
+/* Custom CSS */
 
 * {
     font-family: 'FallingSky';
@@ -163,12 +201,6 @@ video {
 
 #title > h2 {
     font-size: 1.8vmax;
-}
-
-#links > * {
-    font-size: 1.5vmax;
-    text-align: center;
-    margin: 0 1% 0 1%;
 }
 
 #lcc3 {
