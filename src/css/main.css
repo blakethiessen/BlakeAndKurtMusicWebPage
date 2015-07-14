@@ -20,19 +20,6 @@ html, body {
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::selection {
-    background: #B16253;
-    text-shadow: none;
-}
-
-/*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
@@ -54,8 +41,8 @@ video {
 }
 
 #links > a {
-    background-image: url('../img/sm_icons/sm_icons-desktop.png');
-    background-repeat: no-repeat;
+    background-image: url('../img/sm_icons/sm-icons-64.png');
+    background-size: cover;
     width: 64px;
     height: 64px;
     display: inline-block;
@@ -76,12 +63,44 @@ video {
     -o-filter:      none;
 }
 
-.icon-youtube {
+.icon-soundcloud {
     background-position-x: -64px;
 }
-
-.icon-soundcloud {
+.icon-youtube {
     background-position-x: -128px;
+}
+
+@media (min-device-pixel-ratio: 1.01),
+    (-webkit-min-device-pixel-ratio: 1.01),
+    (min--moz-device-pixel-ratio: 1.01),
+    (-o-min-device-pixel-ratio: 101/100) {
+    #links > a {
+        background-image: url('../img/sm_icons/sm-icons-96.png');
+    }
+}
+@media (min-device-pixel-ratio: 1.51),
+(-webkit-min-device-pixel-ratio: 1.51),
+(min--moz-device-pixel-ratio: 1.51),
+(-o-min-device-pixel-ratio: 151/100) {
+    #links > a {
+        background-image: url('../img/sm_icons/sm-icons-128.png');
+    }
+}
+@media (min-device-pixel-ratio: 2.01),
+(-webkit-min-device-pixel-ratio: 2.01),
+(min--moz-device-pixel-ratio: 2.01),
+(-o-min-device-pixel-ratio: 201/100) {
+    #links > a {
+        background-image: url('../img/sm_icons/sm-icons-192.png');
+    }
+}
+@media (min-device-pixel-ratio: 3.01),
+(-webkit-min-device-pixel-ratio: 3.01),
+(min--moz-device-pixel-ratio: 3.01),
+(-o-min-device-pixel-ratio: 301/100) {
+    #links > a {
+        background-image: url('../img/sm_icons/sm-icons-256.png');
+    }
 }
 
 /* General */
@@ -162,7 +181,7 @@ video {
 }
 
 /* Setup Mobile style (even on desktop, width just too small) */
-@media (max-aspect-ratio: 6/5) {
+@media (max-aspect-ratio: 6/5), (max-device-width: 760px) AND (orientation: landscape) {
     * {
         color: #111111;
     }
@@ -193,7 +212,7 @@ video {
 
     #title > h1 {
         font-size: 15vw;
-        line-height: .7em;
+        line-height: .6em;
         text-shadow: 2px 2px 1px rgba(10, 10, 10, .3);
     }
 
@@ -203,6 +222,12 @@ video {
 
     #about > div {
         width: 52%;
+    }
+
+    img::selection,
+    img::-moz-selection {
+        background-color: transparent;
+        color: #000;
     }
 }
 @media (min-width: 321px) {
@@ -222,6 +247,20 @@ video {
     }
 }
 
+@media (max-device-width: 760px) AND (orientation: landscape) {
+    #title > h1 {
+        font-size: 11vw;
+    }
+
+    #about {
+        font-size: 2.2vw;
+    }
+
+    #about > div {
+        width: 56%;
+    }
+}
+
 /* Desktops (IMG names measured with heights)------------
    Note the first @media query will still use the mobile background */
 
@@ -238,6 +277,11 @@ video {
 @media (min-width: 1921px) { #wrapper { background-image: url('../img/backgrounds/bg1440.jpg'); } }
 @media (min-width: 2561px) { #wrapper { background-image: url('../img/backgrounds/bg2916.jpg'); } }
 
+
+::selection {
+    background: #B16253;
+    text-shadow: none;
+}
 
 /* ==========================================================================
    Browser Upgrade Prompt
