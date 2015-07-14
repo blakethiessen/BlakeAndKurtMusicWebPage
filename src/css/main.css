@@ -4,11 +4,6 @@ html, body {
     overflow: hidden;
 }
 
-@media (min-width: 1px) { #wrapper { background-image: url('../img/backgrounds/bg768.jpg'); } }
-@media (min-width: 1366px) { #wrapper { background-image: url('../img/backgrounds/bg1080.jpg'); } }
-@media (min-width: 1921px) { #wrapper { background-image: url('../img/backgrounds/bg1440.jpg'); } }
-@media (min-width: 2561px) { #wrapper { background-image: url('../img/backgrounds/bg2916.jpg'); } }
-
 #wrapper {
     min-height: 100%;
     background-color: black;
@@ -52,7 +47,7 @@ video {
     vertical-align: middle;
 }
 
-/* Icons */
+/* Social Media Icon Links */
 
 #links {
     text-align: center;
@@ -73,7 +68,7 @@ video {
     -o-filter:      grayscale(50%);
 }
 
-#links > a:hover {
+#links > a:hover, #links > a:active {
     filter:         none;
     -webkit-filter: none;
     -moz-filter:    none;
@@ -89,7 +84,7 @@ video {
     background-position-x: -128px;
 }
 
-/* Custom CSS */
+/* General */
 
 * {
     color: #EAEAEA;
@@ -106,14 +101,6 @@ video {
     src: url('../fonts/OstrichSans-Heavy.otf');
 }
 
-#email {
-    color: #b1a981;
-}
-
-#email:hover {
-    color: #ff2a00;
-}
-
 #title > * {
     font-family: 'Ostrich';
     padding: 0;
@@ -122,7 +109,7 @@ video {
     text-align: center;
 }
 
-/*lcc1 = left column container 1*/
+/* lcc1 = left column container 1 */
 #lcc1 {
     display: table;
     width: 100%;
@@ -134,29 +121,23 @@ video {
     vertical-align: middle;
 }
 
+#lcc3 {
+    width: 50%;
+    transform-style: preserve-3d;
+}
+
 #leftcolumn {
     position: relative;
+    display: block;
     top: 50%;
     left: 50%;
+    width: 94%;
     transform: translate(-50%);
 }
 
 #rightcolumncontainter {
     float: left;
     width: 50%;
-}
-
-#leftcolumn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#news {
-    width: 55%;
-    height: 400px;
-    margin: 0 auto 0 auto;
-    background-color: hsla(0, 0%, 33%, 0.2);
 }
 
 #about > div {
@@ -170,37 +151,92 @@ video {
 
 #about > div > p {
     text-align: center;
-    /*font-family: sans-serif;*/
 }
 
-#title > h1 {
-    font-size: 100px;
-    line-height: .7em;
+#email {
+    color: #b1a981;
 }
 
-#title > h2 {
-    font-size: 1.8vmax;
+#email:hover {
+    color: #ff2a00;
 }
 
-#lcc3 {
-    width: 100%;
-    transform-style: preserve-3d;
-}
-
-
-@media screen and (min-aspect-ratio: 6/5) {
-    #leftcolumn {
-        width: 94%;
+/* Setup Mobile style (even on desktop, width just too small) */
+@media (max-aspect-ratio: 6/5) {
+    * {
+        color: #111111;
     }
-
-    #news {
-        width: 60%;
-    }
-
     #lcc3 {
-        width: 50%;
+        width: 100%;
+    }
+    #leftcolumn {
+        width: 85%;
+    }
+    #about > div {
+        width: 58%;
+    }
+
+    #email {
+        color: #30698A;
+    }
+
+    #email:hover, #email:active {
+        color: #C28A49;
     }
 }
+
+/* Mobile screen size increments (IMG names measured with widths) ----------- */
+@media (min-width: 1px) {
+    #wrapper {
+        background-image: url('../img/backgrounds/mbg320w.jpg');
+    }
+
+    #title > h1 {
+        font-size: 15vw;
+        line-height: .7em;
+        text-shadow: 2px 2px 1px rgba(10, 10, 10, .3);
+    }
+
+    #about {
+        font-size: 4vw;
+    }
+
+    #about > div {
+        width: 52%;
+    }
+}
+@media (min-width: 321px) {
+    #wrapper { background-image: url('../img/backgrounds/mbg640w.jpg'); } }
+@media (min-width: 641px) {
+    #wrapper {
+        background-image: url('../img/backgrounds/mbg760w.jpg');
+    }
+
+    #title > h1 {
+        font-size: 6.2em;
+        text-shadow: 2px 2px 1px rgba(240, 240, 240, .3);
+    }
+
+    #about {
+        font-size: 1em;
+    }
+}
+
+/* Desktops (IMG names measured with heights)------------
+   Note the first @media query will still use the mobile background */
+
+@media (min-width: 761px) { #wrapper { background-image: url('../img/backgrounds/mbg1365w.jpg'); } }
+@media (min-aspect-ratio: 6/5) AND (min-width: 761px) {
+     #wrapper {
+         background-image: url('../img/backgrounds/bg768.jpg');
+     }
+    #about > div {
+        width: 80%;
+    }
+}
+@media (min-width: 1366px) { #wrapper { background-image: url('../img/backgrounds/bg1080.jpg'); } }
+@media (min-width: 1921px) { #wrapper { background-image: url('../img/backgrounds/bg1440.jpg'); } }
+@media (min-width: 2561px) { #wrapper { background-image: url('../img/backgrounds/bg2916.jpg'); } }
 
 
 /* ==========================================================================
@@ -213,4 +249,3 @@ video {
     color: #000;
     padding: 0.2em 0;
 }
-
