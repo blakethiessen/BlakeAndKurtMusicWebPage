@@ -64,14 +64,13 @@ video {
 }
 
 .icon-soundcloud {
-    background-position-x: -64px;
+    background-position: -64px 0;
 }
 .icon-youtube {
-    background-position-x: -128px;
+    background-position: -128px 0;
 }
-
 .icon-instagram {
-    background-position-x: -192px;
+    background-position: -192px 0;
 }
 
 @media (min-device-pixel-ratio: 1.01),
@@ -155,6 +154,8 @@ video {
     top: 50%;
     left: 50%;
     width: 94%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
     transform: translate(-50%);
 }
 
@@ -197,7 +198,6 @@ video {
     }
     #leftcolumn {
         width: 85%;
-        margin-top: 2%;
     }
     #about > div {
         width: 58%;
@@ -273,20 +273,28 @@ video {
 
 @media (max-device-width: 760px) AND (orientation: landscape) {
     #title > h1 {
-        font-size: 11vw;
+        font-size: 12vw;
     }
 
     #about {
         font-size: 2.2vw;
     }
+    #leftcolumn {
+        margin-top: 2%;
+    }
 
     #about > div {
         width: 56%;
+        margin: 8px auto;
     }
 
     #links {
         width: initial;
         margin: initial;
+    }
+
+    #links > a {
+        margin: 0 0;
     }
 }
 
