@@ -70,6 +70,10 @@ video {
     background-position-x: -128px;
 }
 
+.icon-instagram {
+    background-position-x: -192px;
+}
+
 @media (min-device-pixel-ratio: 1.01),
     (-webkit-min-device-pixel-ratio: 1.01),
     (min--moz-device-pixel-ratio: 1.01),
@@ -116,12 +120,12 @@ video {
 }
 
 @font-face {
-    font-family: 'Ostrich';
+    font-family: 'Title';
     src: url('../fonts/OstrichSans-Heavy.otf');
 }
 
 #title > * {
-    font-family: 'Ostrich';
+    font-family: 'Title';
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
