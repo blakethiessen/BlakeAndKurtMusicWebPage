@@ -189,6 +189,9 @@ video {
     * {
         color: #111111;
     }
+    #wrapper {
+        background-color: #FEFEFE;
+    }
     #lcc3 {
         width: 100%;
     }
