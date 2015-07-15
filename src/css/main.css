@@ -197,6 +197,7 @@ video {
     }
     #leftcolumn {
         width: 85%;
+        margin-top: 2%;
     }
     #about > div {
         width: 58%;
@@ -224,11 +225,16 @@ video {
     }
 
     #about {
-        font-size: 4vw;
+        font-size: 3.3vw;
     }
 
     #about > div {
         width: 52%;
+    }
+
+    #links {
+        width: 65%;
+        margin: 0 auto;
     }
 
     img::selection,
@@ -238,15 +244,26 @@ video {
     }
 }
 @media (min-width: 321px) {
-    #wrapper { background-image: url('../img/backgrounds/mbg640w.jpg'); } }
+    #wrapper {
+        background-image: url('../img/backgrounds/mbg640w.jpg');
+    }
+    #about {
+        font-size: 4vw;
+    }
+}
 @media (min-width: 641px) {
     #wrapper {
         background-image: url('../img/backgrounds/mbg760w.jpg');
     }
 
     #title > h1 {
-        font-size: 6.2em;
+        font-size: 6em;
         text-shadow: 2px 2px 1px rgba(240, 240, 240, .3);
+    }
+
+    #links {
+        width: initial;
+        margin: initial;
     }
 
     #about {
@@ -265,6 +282,11 @@ video {
 
     #about > div {
         width: 56%;
+    }
+
+    #links {
+        width: initial;
+        margin: initial;
     }
 }
 
