@@ -191,6 +191,7 @@ video {
 
 #about > div > p {
     text-align: center;
+    margin: 3% 0;
 }
 
 #email {
@@ -252,7 +253,7 @@ video {
     }
 
     #about > div {
-        width: 52%;
+        width: 53%;
     }
 
     #links {
