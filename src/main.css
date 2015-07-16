@@ -110,21 +110,37 @@ video {
 
 * {
     color: #EAEAEA;
-    font-family: London;
+    font-family: londonbetweenregular;
 }
 
 @font-face {
-    font-family: 'London';
-    src: url('fonts/LondonBetween.ttf');
+    font-family: 'londonbetweenregular';
+    src: url('fonts/londonbetween-webfont.eot');
+    src: url('fonts/londonbetween-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/londonbetween-webfont.woff2') format('woff2'),
+    url('fonts/londonbetween-webfont.woff') format('woff'),
+    url('fonts/londonbetween-webfont.ttf') format('truetype'),
+    url('fonts/londonbetween-webfont.svg#londonbetweenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-    font-family: 'Rhyder';
-    src: url('fonts/Rhyder.otf');
+    font-family: 'rhyderregular';
+    src: url('fonts/rhyder-webfont.eot');
+    src: url('fonts/rhyder-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/rhyder-webfont.woff2') format('woff2'),
+    url('fonts/rhyder-webfont.woff') format('woff'),
+    url('fonts/rhyder-webfont.ttf') format('truetype'),
+    url('fonts/rhyder-webfont.svg#rhyderregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 #title * {
-    font-family: 'Rhyder';
+    font-family: 'rhyderregular';
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -221,7 +237,7 @@ video {
     #title > p {
         font-size: 17vw;
         font-variant: small-caps;
-        line-height: .3em;
+        line-height: .4em;
         text-shadow: 2px 2px 1px rgba(10, 10, 10, .3);
     }
     #ampersand {
