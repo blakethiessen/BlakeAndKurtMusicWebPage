@@ -41,7 +41,7 @@ video {
 }
 
 #links > a {
-    background-image: url('../img/sm_icons/sm-icons-64.png');
+    background-image: url('img/sm_icons/sm-icons-64.png');
     background-size: cover;
     width: 64px;
     height: 64px;
@@ -78,7 +78,7 @@ video {
     (min--moz-device-pixel-ratio: 1.01),
     (-o-min-device-pixel-ratio: 101/100) {
     #links > a {
-        background-image: url('../img/sm_icons/sm-icons-96.png');
+        background-image: url('img/sm_icons/sm-icons-96.png');
     }
 }
 @media (min-device-pixel-ratio: 1.51),
@@ -86,7 +86,7 @@ video {
 (min--moz-device-pixel-ratio: 1.51),
 (-o-min-device-pixel-ratio: 151/100) {
     #links > a {
-        background-image: url('../img/sm_icons/sm-icons-128.png');
+        background-image: url('img/sm_icons/sm-icons-128.png');
     }
 }
 @media (min-device-pixel-ratio: 2.01),
@@ -94,7 +94,7 @@ video {
 (min--moz-device-pixel-ratio: 2.01),
 (-o-min-device-pixel-ratio: 201/100) {
     #links > a {
-        background-image: url('../img/sm_icons/sm-icons-192.png');
+        background-image: url('img/sm_icons/sm-icons-192.png');
     }
 }
 @media (min-device-pixel-ratio: 3.01),
@@ -102,7 +102,7 @@ video {
 (min--moz-device-pixel-ratio: 3.01),
 (-o-min-device-pixel-ratio: 301/100) {
     #links > a {
-        background-image: url('../img/sm_icons/sm-icons-256.png');
+        background-image: url('img/sm_icons/sm-icons-256.png');
     }
 }
 
@@ -115,16 +115,16 @@ video {
 
 @font-face {
     font-family: 'London';
-    src: url('../fonts/LondonBetween.ttf');
+    src: url('fonts/LondonBetween.ttf');
 }
 
 @font-face {
-    font-family: 'Title';
-    src: url('../fonts/OstrichSans-Heavy.otf');
+    font-family: 'Rhyder';
+    src: url('fonts/Rhyder.otf');
 }
 
-#title > * {
-    font-family: 'Title';
+#title * {
+    font-family: 'Rhyder';
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -215,13 +215,20 @@ video {
 /* Mobile screen size increments (IMG names measured with widths) ----------- */
 @media (min-width: 1px) {
     #wrapper {
-        background-image: url('../img/backgrounds/mbg320w.jpg');
+        background-image: url('img/backgrounds/mbg320w.jpg');
     }
 
-    #title > h1 {
-        font-size: 15vw;
-        line-height: .6em;
+    #title > p {
+        font-size: 17vw;
+        font-variant: small-caps;
+        line-height: .3em;
         text-shadow: 2px 2px 1px rgba(10, 10, 10, .3);
+    }
+    #ampersand {
+        font-size: 14.17vw;
+    }
+    #space2 {
+        font-size: 9.44vw;
     }
 
     #about {
@@ -245,7 +252,7 @@ video {
 }
 @media (min-width: 321px) {
     #wrapper {
-        background-image: url('../img/backgrounds/mbg640w.jpg');
+        background-image: url('img/backgrounds/mbg640w.jpg');
     }
     #about {
         font-size: 4vw;
@@ -253,12 +260,18 @@ video {
 }
 @media (min-width: 641px) {
     #wrapper {
-        background-image: url('../img/backgrounds/mbg760w.jpg');
+        background-image: url('img/backgrounds/mbg760w.jpg');
     }
 
-    #title > h1 {
-        font-size: 6em;
+    #title > p {
+        font-size: 7em;
         text-shadow: 2px 2px 1px rgba(240, 240, 240, .3);
+    }
+    #ampersand {
+        font-size: .83em;
+    }
+    #space2 {
+        font-size: .5em;
     }
 
     #links {
@@ -272,8 +285,14 @@ video {
 }
 
 @media (max-device-width: 760px) AND (orientation: landscape) {
-    #title > h1 {
-        font-size: 12vw;
+    #title > p {
+        font-size: 14vw;
+    }
+    #ampersand {
+        font-size: 11.67vw;
+    }
+    #space2 {
+        font-size: 7.78vw;
     }
 
     #about {
@@ -294,25 +313,25 @@ video {
     }
 
     #links > a {
-        margin: 0 0;
+        margin: 0 2px;
     }
 }
 
 /* Desktops (IMG names measured with heights)------------
    Note the first @media query will still use the mobile background */
 
-@media (min-width: 761px) { #wrapper { background-image: url('../img/backgrounds/mbg1365w.jpg'); } }
+@media (min-width: 761px) { #wrapper { background-image: url('img/backgrounds/mbg1365w.jpg'); } }
 @media (min-aspect-ratio: 6/5) AND (min-width: 761px) {
      #wrapper {
-         background-image: url('../img/backgrounds/bg768.jpg');
+         background-image: url('img/backgrounds/bg768.jpg');
      }
     #about > div {
         width: 80%;
     }
 }
-@media (min-width: 1366px) { #wrapper { background-image: url('../img/backgrounds/bg1080.jpg'); } }
-@media (min-width: 1921px) { #wrapper { background-image: url('../img/backgrounds/bg1440.jpg'); } }
-@media (min-width: 2561px) { #wrapper { background-image: url('../img/backgrounds/bg2916.jpg'); } }
+@media (min-width: 1366px) { #wrapper { background-image: url('img/backgrounds/bg1080.jpg'); } }
+@media (min-width: 1921px) { #wrapper { background-image: url('img/backgrounds/bg1440.jpg'); } }
+@media (min-width: 2561px) { #wrapper { background-image: url('img/backgrounds/bg2916.jpg'); } }
 
 
 ::selection {
